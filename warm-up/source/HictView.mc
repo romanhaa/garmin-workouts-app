@@ -24,7 +24,7 @@ class HictView extends Ui.View {
     //! the state of this View and prepare it to be shown. This includes
     //! loading resources into memory.
     function onShow() {
-        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE, Sensor.SENSOR_FOOTPOD]);
+        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_FOOTPOD]);
         Sensor.enableSensorEvents(method(:sensorAction));
     }
 
@@ -51,10 +51,6 @@ class HictView extends Ui.View {
         // Draw the heart rate label
         view = View.findDrawableById(HeartrateLabel);
         drawHeartrateLabel(view);
-
-        // Draw the temperature label
-        view = View.findDrawableById(TemperatureLabel);
-        drawTemperatureLabel(view);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -278,9 +274,6 @@ class HictView extends Ui.View {
             // Heart rate sensor info
             heartRate = (info.heartRate == null) ? 0 : info.heartRate;
 
-            // Temperature sensor info
-            temperature = info.temperature;
-
             // Update view
             Ui.requestUpdate();
         }
@@ -471,24 +464,6 @@ class HictView extends Ui.View {
         }
     }
 
-    hidden function drawTemperatureLabel(view) {
-        // Check temperature sensor
-        if (temperature == null) {
-            readTemperatureFromSensorHistory();
-        }
-
-        if (temperature != null) {
-            // Convert to °F if settings set to statute
-            if (Sys.getDeviceSettings().temperatureUnits == Sys.UNIT_STATUTE) {
-                temperature = (temperature * 9 / 5) + 32;
-            }
-
-            view.setText(Lang.format("$1$", [temperature.format("%1.1f")]));
-        } else {
-            view.setText(Ui.loadResource(Rez.Strings.no_value));
-        }
-    }
-
     hidden function isSevenMinuteTraining() {
         return (activityType == Prefs.SEVEN);
     }
@@ -555,44 +530,6 @@ class HictView extends Ui.View {
         return string;
     }
 
-    function readTemperatureFromSensorHistory() {
-        if (Toybox has :SensorHistory) {
-            var sensorIter = getTemperatureIterator({:period => 1, :order => SensorHistory.ORDER_NEWEST_FIRST});
-            if( sensorIter != null ) {
-                var sample = sensorIter.next();
-                if (sample != null && sample.data != null && sample.when != null) {
-                    var currentMoment = Time.now();
-                    var sampleMoment = new Time.Moment(sample.when.value);
-
-                    var diffDuration = sample.when.subtract(currentMoment);
-                    if (Log.isDebugEnabled()) {
-                        Log.debug("Sample data: " + sample.data + "°, age: " + diffDuration.value() + "s");
-                    }
-                    // Ignore sample older than 3 minutes
-                    if (diffDuration.value() < 180) {
-                        temperature = sample.data;
-                    } else {
-                        if (Log.isDebugEnabled()) {
-                            Log.debug("Sample too old, ignored");
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    // Create a method to get the SensorHistoryIterator object
-    hidden function getTemperatureIterator(options) {
-        // Check device for SensorHistory compatability
-        if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getTemperatureHistory)) {
-            // Set up the method with parameters
-            var getMethod = new Lang.Method(Toybox.SensorHistory, :getTemperatureHistory);
-            // Invoke the method with the given parameters
-            return getMethod.invoke(options);
-        }
-        return null;
-    }
-
     //! List of exercises.
     hidden var EXERCISES = [
         Ui.loadResource(Rez.Strings.exercise1),
@@ -635,8 +572,6 @@ class HictView extends Ui.View {
 
     // Heart rate value, if available
     hidden var heartRate = 0;
-    // Temperature value, if available
-    hidden var temperature = null;
 
     // Activity type
     hidden var activityType = 0;
@@ -660,5 +595,4 @@ class HictView extends Ui.View {
     hidden const TimerLabel = "TimerLabel";
     hidden const ExerciseLabel = "ExerciseLabel";
     hidden const HeartrateLabel = "HeartrateLabel";
-    hidden const TemperatureLabel = "TemperatureLabel";
 }
