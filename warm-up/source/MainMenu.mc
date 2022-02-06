@@ -71,8 +71,6 @@ class MainMenu extends Ui.Menu2 {
         switch (mode) {
             case Prefs.POLICY_START_END:
                 return Ui.loadResource(Rez.Strings.notif_start_end);
-            case Prefs.POLICY_EVERY_10:
-                return Ui.loadResource(Rez.Strings.notif_every_10s);
             case Prefs.POLICY_NONE:
                 // Falls through
             default:

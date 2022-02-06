@@ -256,10 +256,6 @@ class HictView extends Ui.View {
                 if (periodTime >= exerciseDelay) {
                     // Switch to rest
                     switchToRest();
-                } else {
-                    if (notificationPolicy == Prefs.POLICY_EVERY_10 && periodTime % 10 == 0) {
-                        notifyShort();
-                    }
                 }
             }
         }
@@ -355,18 +351,6 @@ class HictView extends Ui.View {
         if (allowVibration) {
             Attention.vibrate([
                 new Attention.VibeProfile(100, 1000)
-            ]);
-        }
-    }
-
-    hidden function notifyShort() {
-        turnOnBacklight();
-        if (allowTone) {
-            Attention.playTone(Attention.TONE_INTERVAL_ALERT);
-        }
-        if (allowVibration) {
-            Attention.vibrate([
-                new Attention.VibeProfile(100, 400)
             ]);
         }
     }
@@ -584,7 +568,7 @@ class HictView extends Ui.View {
     // Start delay
     hidden const startDelay = 5;
     // Notification policy
-    hidden var notificationPolicy = Prefs.POLICY_EVERY_10;
+    hidden var notificationPolicy = Prefs.POLICY_START_END;
     // Allow vibration
     hidden var allowVibration = true;
     // Allow tone

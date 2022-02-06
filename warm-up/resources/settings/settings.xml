@@ -23,7 +23,6 @@
 		<settingConfig type="list" required="true">
 			<listEntry value="0">@Strings.no_notif</listEntry>
 			<listEntry value="1">@Strings.notif_start_end</listEntry>
-			<listEntry value="2">@Strings.notif_every_10s</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.allowVibration" title="@Strings.AllowVibrationLabel">

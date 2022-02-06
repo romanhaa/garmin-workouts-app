@@ -6,5 +6,5 @@
 	<property id="activityType" type="number">0</property>
 	<property id="allowVibration" type="boolean">true</property>
 	<property id="allowTone" type="boolean">false</property>
-	<property id="notifPolicy" type="number">2</property>
+	<property id="notifPolicy" type="number">1</property>
 </properties>

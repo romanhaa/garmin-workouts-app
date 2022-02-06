@@ -15,7 +15,6 @@ module Prefs {
     enum {
         POLICY_NONE = 0,
         POLICY_START_END = 1,
-        POLICY_EVERY_10 = 2
     }
 
     //! Store activity type
@@ -183,20 +182,10 @@ module Prefs {
 
     function getNotificationPolicyPref() {
         var app = App.getApp();
-        var def = POLICY_EVERY_10;
 
         if (app != null) {
             var pref = app.getProperty(NOTIF_POLICY);
             if (pref != null) {
-                // GCM returns value as string!
-                if (pref instanceof Toybox.Lang.String && pref != "") {
-                    try {
-                        pref = pref.toNumber();
-                    } catch(ex1) {
-                        return def;
-                    }
-                }
-
                 if (pref == 0) {
                     return POLICY_NONE;
                 } else if (pref == 1) {
@@ -206,7 +195,7 @@ module Prefs {
         }
 
         // Default
-        return def;
+        return POLICY_START_END;
     }
 
     // Settings name, see resources/settings.xml

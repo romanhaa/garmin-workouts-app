@@ -58,10 +58,6 @@ class HictMenuDelegate extends Ui.Menu2InputDelegate {
             Prefs.setNotificationPolicy(Prefs.POLICY_START_END);
             Ui.popView(Ui.SLIDE_RIGHT);
         }
-        if (itemId == :Policy2) {
-            Prefs.setNotificationPolicy(Prefs.POLICY_EVERY_10);
-            Ui.popView(Ui.SLIDE_RIGHT);
-        }
     }
 
 }
