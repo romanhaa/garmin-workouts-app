@@ -17,23 +17,6 @@ module Prefs {
         POLICY_START_END = 1,
     }
 
-    //! Store activity type
-    function setActivityType(type) {
-        App.getApp().setProperty(ACTIVITY_TYPE, type);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: activity type set to " + type);
-        }
-    }
-
-    //! Get activity type
-    function getActivityType() {
-        var type = getNumber(ACTIVITY_TYPE, 0, 0, 999);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: activity type value is " + type);
-        }
-        return type;
-    }
-
     //! Store exercise duration
     function setExerciseDuration(duration) {
         App.getApp().setProperty(EXERCISE_DURATION, duration);
@@ -199,7 +182,6 @@ module Prefs {
     }
 
     // Settings name, see resources/settings.xml
-    const ACTIVITY_TYPE = "activityType";
     const EXERCISE_DURATION = "exerTime";
     const REST_DURATION = "restTime";
     const EXERCISE_COUNT = "exerCount";

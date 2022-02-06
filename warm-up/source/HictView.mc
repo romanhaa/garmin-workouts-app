@@ -290,7 +290,6 @@ class HictView extends Ui.View {
         exerciseDelay = Prefs.getExerciseDuration();
         restDelay = Prefs.getRestDuration();
         maxExerciseCount = Prefs.getExerciseCount();
-        activityType = Prefs.getActivityType();
         notificationPolicy = Prefs.getNotificationPolicy();
         allowVibration = (Attention has :vibrate) && (Sys.getDeviceSettings().vibrateOn) && (Prefs.isAllowVibration());
         allowTone = (Attention has :playTone) && (Sys.getDeviceSettings().tonesOn) && (Prefs.isAllowTone());
@@ -302,11 +301,7 @@ class HictView extends Ui.View {
             if (resting) {
                 text = exerciseCount < 1 ? Ui.loadResource(Rez.Strings.get_ready) : Ui.loadResource(Rez.Strings.rest);
             } else {
-                if (isSevenMinuteTraining()) {
-                    text = EXERCISES[(exerciseCount - 1) % EXERCISES.size()];
-                } else {
-                    text = Ui.loadResource(Rez.Strings.exercise) + exerciseCount;
-                }
+                text = EXERCISES[(exerciseCount - 1) % EXERCISES.size()];
             }
             view.setText(text);
         } else {
@@ -317,11 +312,7 @@ class HictView extends Ui.View {
     hidden function drawNextExerciseLabel(view) {
         if (running) {
             var text = "";
-            if (isSevenMinuteTraining()) {
-                text = exerciseCount < maxExerciseCount ? EXERCISES[exerciseCount % EXERCISES.size()] : "";
-            } else {
-                text = Ui.loadResource(Rez.Strings.exercise) + (exerciseCount + 1);
-            }
+            text = exerciseCount < maxExerciseCount ? EXERCISES[exerciseCount % EXERCISES.size()] : "";
             view.setText(text);
         } else {
             view.setText("");
@@ -352,10 +343,6 @@ class HictView extends Ui.View {
         } else {
             view.setText(Ui.loadResource(Rez.Strings.no_value));
         }
-    }
-
-    hidden function isSevenMinuteTraining() {
-        return (activityType == Prefs.SEVEN);
     }
 
     //! Format number with 2 digits
@@ -414,8 +401,6 @@ class HictView extends Ui.View {
     // Heart rate value, if available
     hidden var heartRate = 0;
 
-    // Activity type
-    hidden var activityType = 0;
     // Max number of exercises
     hidden var maxExerciseCount = 13;
     // Exercise delay

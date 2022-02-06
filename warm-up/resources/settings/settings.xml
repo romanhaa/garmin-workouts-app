@@ -2,14 +2,6 @@
 	<setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionLabel">
 		<settingConfig type="alphaNumeric" readonly="true" />
 	</setting>
-	<setting propertyKey="@Properties.activityType" title="@Strings.ActivityTypeLabel" prompt="@Strings.ActivityTypePrompt">
-		<settingConfig type="list" required="true">
-			<listEntry value="0">@Strings.sevenminutes</listEntry>
-			<listEntry value="1">@Strings.cardio</listEntry>
-			<listEntry value="2">@Strings.strength</listEntry>
-			<listEntry value="3">@Strings.flexibility</listEntry>
-		</settingConfig>
-	</setting>
 	<setting propertyKey="@Properties.exerCount" title="@Strings.ExerciseCountLabel" prompt="@Strings.ExerciseCountPrompt">
 		<settingConfig type="numeric" min="1" errorMessage="@Strings.ExerciseCountError" />
 	</setting>

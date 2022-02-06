@@ -9,11 +9,6 @@ class MainMenu extends Ui.Menu2 {
 
         var label;
 
-        // Activity type
-        label = Ui.loadResource(Rez.Strings.ActivityTypeLabel);
-        activityTypeItem = new Ui.MenuItem(label, null, :ActivityType, null);
-        self.addItem(activityTypeItem);
-
         // Exercise count
         label = Ui.loadResource(Rez.Strings.ExerciseCountLabel);
         exerciseCountItem = new Ui.MenuItem(label, null, :ExerciseCount, null);
@@ -41,29 +36,10 @@ class MainMenu extends Ui.Menu2 {
     }
 
     function refreshSubLabels() {
-        activityTypeItem.setSubLabel(getActivityTypeLabel());
         exerciseCountItem.setSubLabel(Prefs.getExerciseCount().toString());
         exerciseDurationItem.setSubLabel(Prefs.getExerciseDuration().toString());
         restDurationItem.setSubLabel(Prefs.getRestDuration().toString());
         notifPolicyItem.setSubLabel(getNotifPolicyLabel());
-    }
-
-    function getActivityTypeLabel() {
-        var mode = Prefs.getActivityType();
-        switch (mode) {
-            case Prefs.CARDIO:
-                return Ui.loadResource(Rez.Strings.cardio);
-            case Prefs.STRENGTH:
-                return Ui.loadResource(Rez.Strings.strength);
-            case Prefs.FLEXIBILITY:
-                return Ui.loadResource(Rez.Strings.flexibility);
-            case Prefs.SEVEN:
-                // Falls through
-            default:
-                // Falls through
-        }
-        // Default
-        return Ui.loadResource(Rez.Strings.sevenminutes);
     }
 
     function getNotifPolicyLabel() {
@@ -80,8 +56,6 @@ class MainMenu extends Ui.Menu2 {
         return Ui.loadResource(Rez.Strings.no_notif);
     }
 
-
-    hidden var activityTypeItem;
     hidden var exerciseCountItem;
     hidden var exerciseDurationItem;
     hidden var restDurationItem;

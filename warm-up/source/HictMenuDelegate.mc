@@ -24,29 +24,8 @@ class HictMenuDelegate extends Ui.Menu2InputDelegate {
             Ui.pushView(new SingleNumberPicker(Rez.Strings.ExerciseCountLabel, Prefs.getExerciseCount(), 1, 99),
                 new ExerciseCountPickerDelegate(), Ui.SLIDE_IMMEDIATE);
         }
-        if (itemId == :ActivityType) {
-            Ui.pushView(new ActivityTypeMenu(Prefs.getActivityType()), self, Ui.SLIDE_LEFT);
-        }
         if (itemId == :NotifPolicy) {
             Ui.pushView(new NotifPolicyMenu(Prefs.getNotificationPolicy()), self, Ui.SLIDE_LEFT);
-        }
-
-        // Activity type
-        if (itemId == :Seven) {
-            Prefs.setActivityType(Prefs.SEVEN);
-            Ui.popView(Ui.SLIDE_RIGHT);
-        }
-        if (itemId == :Cardio) {
-            Prefs.setActivityType(Prefs.CARDIO);
-            Ui.popView(Ui.SLIDE_RIGHT);
-        }
-        if (itemId == :Strength) {
-            Prefs.setActivityType(Prefs.STRENGTH);
-            Ui.popView(Ui.SLIDE_RIGHT);
-        }
-        if (itemId == :Flexibility) {
-            Prefs.setActivityType(Prefs.FLEXIBILITY);
-            Ui.popView(Ui.SLIDE_RIGHT);
         }
 
         // Notification policy

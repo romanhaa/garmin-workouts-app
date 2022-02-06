@@ -3,7 +3,6 @@
 	<property id="exerTime" type="number">30</property>
 	<property id="restTime" type="number">10</property>
 	<property id="exerCount" type="number">13</property>
-	<property id="activityType" type="number">0</property>
 	<property id="allowVibration" type="boolean">true</property>
 	<property id="allowTone" type="boolean">false</property>
 	<property id="notifPolicy" type="number">1</property>

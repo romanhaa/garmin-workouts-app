@@ -12,8 +12,6 @@
 	<string id="ExerciseCountLabel">Exercise count</string>
 	<string id="ExerciseCountPrompt">Enter the number of exercises for the session</string>
 	<string id="ExerciseCountError">Exercise count cannot be less than 1</string>
-	<string id="ActivityTypeLabel">Activity type</string>
-	<string id="ActivityTypePrompt">Select the activity type</string>
 	<string id="NotifPolicyLabel">Notification policy</string>
 	<string id="NotifPolicyPrompt">Select how to be notified of exercise changes</string>
 	<string id="AllowVibrationLabel">Allow vibrations</string>
@@ -24,10 +22,6 @@
 	<string id="get_ready">Get ready</string>
 	<string id="rest">Rest</string>
 	<string id="stop_session">Stop session?</string>
-	<string id="sevenminutes">7-Minute</string>
-	<string id="cardio">Cardio</string>
-	<string id="strength">Strength</string>
-	<string id="flexibility">Flexibility</string>
 	<string id="no_notif">No notification</string>
 	<string id="notif_start_end">Exercise start and end</string>
 
