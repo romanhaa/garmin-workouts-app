@@ -1,0 +1,23 @@
+v.1.22 - 2020-03-xx
+
+- Change start delay to 5 seconds, instead of same value as rest delay.
+
+v.1.21 - 2020-02-01
+
+- New options menu format for modern watches (Connect IQ 3+).
+- Fix "workou" session name.
+- Upgrade to Connect IQ SDK 3.1.7.
+
+v.1.20 - 2020-01-10
+
+- Add Swedish support, thanks to Erik.
+- Fix temperature units based on Garmin Connect settings.
+
+v.1.19 - 2019-11-29
+
+- Add support for new watches.
+- Add support for repetitive activities in same workout.
+- Add Russian support, thanks to Korneev.
+- Upgrade to Connect IQ SDK 3.1.6.
+
+Full history at https://bitbucket.org/obagot/connectiq-hict/src/master/README.md#markdown-header-history

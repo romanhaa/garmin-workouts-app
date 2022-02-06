@@ -1,0 +1,49 @@
+7-Minute Workout application for Garmin watches.
+
+Note: This app is in maintenance. No additional features will be added in the future. Thank you for your understanding.
+
+This watch application drives you through the execution of 13 exercises described in literature as High-Intensity Circuit Training.
+
+Read more in this article from ACSM's Health and Fitness Journal: https://goo.gl/zAnVOP
+
+The watch displays a timer for the 30-second exercises followed by 10-second rest period (configurable).
+
+Number of exercises, duration of exercises and rest periods are configurable on the watch menu or through Garmin Connect Mobile.
+Vibration and sound notification is supported based on the watch features.
+
+Four activity types are available:
+
+ - 7-minute workout: 13 exercises from HICT program are repeated, activity is saved as cardio training
+ - Cardio: activity is saved as cardio training
+ - Strength: activity is saved as strength training
+ - Flexibility: activity is saved as flexibility training, but Garmin Connect displays it as "Strength Training"
+
+The application supports heart-rate monitor (HRM) and temperature sensor (Tempe).
+
+Use the menu button to configure:
+
+ - Activity type
+ - Number of exercises
+ - Duration of exercise, in seconds
+ - Duration of rest period, in seconds
+ - Notification policy: none, start and end, every 10 seconds
+
+If you achieve at least half of the session, the activity is recorded in your Garmin profile.
+
+The activity in your Garmin profile will include basic information such as date, time, total activity time and laps.
+ - Each exercise and rest period corresponds to a lap.
+ - Heart-rate graph is included if a heart-rate monitor is used.
+ - Temperature graph is included if a temperature sensor is used.
+ - Calories will be automatically calculated if and only if a heart-rate monitor is used.
+
+
+== SUPPORT ==
+
+Please submit questions, issues and enhancement requests on the project site: https://bitbucket.org/obagot/connectiq-hict/issues
+Available languages: Danish (partly), English, French, German, Polish, Russian, Spanish, Swedish.
+
+
+== DEVELOPMENT ==
+
+Source code is made available under the MIT license on the project site: https://bitbucket.org/obagot/connectiq-hict
+Pull requests and translations are welcomed!

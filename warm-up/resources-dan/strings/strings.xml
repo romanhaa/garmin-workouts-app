@@ -1,0 +1,35 @@
+<strings>
+	<string id="AppName">7-min</string>
+	<string id="AppDescription">7-Minute Workout</string>
+
+	<string id="AppVersionLabel">Version</string>
+	<string id="ExerciseTimeLabel">Exercise duration (s)</string>
+	<string id="ExerciseTimePrompt">Indtast øvelsens varighed i sekunder</string>
+	<string id="ExerciseTimeError">Varighed kan ikke være mindre end 15 sekunder
+	</string>
+	<string id="RestTimeLabel">Rest duration (s)</string>
+	<string id="RestTimePrompt">Indtast varighed af hvil i sekunder</string>
+	<string id="RestTimeError">Hvile varighed kan ikke være mindre end 10 sekunder
+	</string>
+
+	<string id="press_start">Tryk start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Gør dig klar</string>
+	<string id="rest">Slap af</string>
+	<string id="stop_session">Stop træning?</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise1">Sprællemand</string>
+	<string id="exercise2">Sid op ad mur</string>
+	<string id="exercise3">Armbøjning</string>
+	<string id="exercise4">Mave bøjning</string>
+	<string id="exercise5">Step-up (stol)</string>
+	<string id="exercise6">Squat</string>
+	<string id="exercise7">Triceps dip (stol)</string>
+	<string id="exercise8">Planke</string>
+	<string id="exercise9">Knæ til bryst</string>
+	<string id="exercise10">Lunge</string>
+	<string id="exercise11">Armbøjning siderot. (skift)</string>
+	<string id="exercise12">Planke venstre</string>
+	<string id="exercise13">Planke højre</string>
+</strings>

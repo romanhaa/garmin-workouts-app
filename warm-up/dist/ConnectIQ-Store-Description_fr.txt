@@ -1,0 +1,49 @@
+Application 7-Minute Workout pour montres Garmin.
+
+Note : Cette application est en maintenance. Plus aucune fonctionalité ne pourra être ajoutée dorénavant. Merci de votre compréhension.
+
+Cette application vous permet d'enchainer les 12 exercices d'entraînement fractionné de haute intensité (HICT ou HIIT).
+
+Cet entraînement est proposé et décrit dans un article de ACSM's Health and Fitness Journal: https://goo.gl/zAnVOP
+
+La montre affiche un minuteur pour les exercices (30 secondes) ainsi que les périodes de repos (10 secondes).
+
+Le nombre d'exercises, leur durée ainsi que la durée du repos sont configurables par le menu de la montre et Garmin Connect Mobile.
+Les notifications par vibration ou sons dépendent du modèle de montre.
+
+Quatre activités sont proposées :
+
+ - 7-minute workout : les 13 exercices du programme HICT sont répétés, l'activité est enregistrée comme "Cardio"
+ - Cardio : l'activité est enregistrée comme "Cardio"
+ - Musculation : l'activité est enregistrée comme "Musculation"
+ - Souplesse : l'activité est enregistrée comme "Souplesse", mais Garmin Connect la catégorise comme "Musculation"
+
+L'application supporte les moniteurs cardiaques (HRM) et le capteur de température (Tempe).
+
+L'utilisation du bouton ou de la touche Menu permet la configuration de :
+
+ - Type d'activité
+ - Nombre d'exercices
+ - Durée des exercices, en secondes
+ - Durée des périodes de repos, en secondes
+ - Politique de notification : aucune, début et fin, toutes les 10 secondes
+
+Si vous terminez la moitié des exercices, l'activité est enregistrée dans votre profil Garmin.
+
+L'activité enregistrée dans votre profil Garmin contient les informations principales comme la date, l'heure, la durée de l'entraînement et les plages d'exercice (intervalles).
+ - Chaque exercice correspond à un intervalle.
+ - Le graphe de la fréquence cardiaque si un moniteur a été utilisé.
+ - Le graphe de température si le capteur Tempe a été utilisé.
+ - Les calories brulées sont calculées automatiquement par Garmin Connect lorsqu'un moniteur cardiaque est utilisé.
+
+
+== SUPPORT ==
+
+Vous pouvez soumettre les questions, problèmes et idées d'améliorations sur le site du projet : https://bitbucket.org/obagot/connectiq-hict/issues
+Langue : Allemand, Anglais, Danois (partiel), Espagnol, Français, Polonais, Russe, Suédois.
+
+
+== DEVELOPMENT ==
+
+Le code source est disponible sous licence MIT sur le site du projet : https://bitbucket.org/obagot/connectiq-hict
+Les pull requests et les traductions sont les bienvenues !

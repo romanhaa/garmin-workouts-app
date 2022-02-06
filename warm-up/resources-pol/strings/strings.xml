@@ -1,0 +1,50 @@
+<strings>
+	<string id="AppName">7-min</string>
+	<string id="AppDescription">7-Minute Workout</string>
+
+	<string id="AppVersionLabel">Wersja</string>
+	<string id="ExerciseTimeLabel">Czas trwania (s)</string>
+	<string id="ExerciseTimePrompt">Czas trwania w sekundach</string>
+	<string id="ExerciseTimeError">Wprowadzic min.10 s</string>
+	<string id="RestTimeLabel">Czas odpoczynku (s)</string>
+	<string id="RestTimePrompt">Czas odpoczynku w sekundach</string>
+	<string id="RestTimeError">Wprowadziæ min.5 s</string>
+	<string id="ExerciseCountLabel">Sesja treningowa</string>
+	<string id="ExerciseCountPrompt">Sesja treningowa</string>
+	<string id="ExerciseCountError">wybraæ min.1 sesje</string>
+	<string id="ActivityTypeLabel">Aktywnosc</string>
+	<string id="ActivityTypePrompt">Wybierz aktywosc</string>
+	<string id="NotifPolicyLabel">Powiadomienia</string>
+	<string id="NotifPolicyPrompt">Wybierz start powiadomien</string>
+	<string id="AllowVibrationLabel">Ustaw wibracje</string>
+	<string id="AllowToneLabel">Ustaw dzwiek</string>
+
+	<string id="press_start">Nacisnij start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Start...</string>
+	<string id="rest">Pauza...</string>
+	<string id="stop_session">zakonczyc sesje?</string>
+	<string id="sevenminutes">7-minut</string>
+	<string id="cardio">Kardio</string>
+	<string id="strength">Sila</string>
+	<string id="flexibility">Rozciaganie</string>
+	<string id="no_notif">brak powiadomien</string>
+	<string id="notif_start_end">start i koniec sesji</string>
+	<string id="notif_every_10s">co 10 s</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise">Sesja #</string>
+	<string id="exercise1">Pajace</string>
+	<string id="exercise2">Siad przy scianie</string>
+	<string id="exercise3">Pompki</string>
+	<string id="exercise4">Brzuszki</string>
+	<string id="exercise5">Stepy(krzeslo)</string>
+	<string id="exercise6">Półprzysiad</string>
+	<string id="exercise7">Triceps(krzeslo)</string>
+	<string id="exercise8">Deska</string>
+	<string id="exercise9">Bieg w miejscu</string>
+	<string id="exercise10">Wykrok</string>
+	<string id="exercise11">Pompki skretne</string>
+	<string id="exercise12">Deska lewa str.</string>
+	<string id="exercise13">Deska prawa str.</string>
+</strings>

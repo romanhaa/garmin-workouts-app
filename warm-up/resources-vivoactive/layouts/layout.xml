@@ -1,0 +1,11 @@
+<layout id="MainLayout">
+	<label id="TextLabel" x="center" y="2" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_GREEN" text="@Strings.press_start" />
+	<label id="TimerLabel" x="145" y="42" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+	<label id="NextLabel" x="center" y="118" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_YELLOW" />
+    <bitmap id="ExerciseIcon" x="5" y="32" filename="../../resources/drawables/exercise-24.png" dithering="none" />
+	<label id="ExerciseLabel" x="35" y="32" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_WHITE" text="@Strings.no_value" />
+    <bitmap id="HeartrateIcon" x="5" y="62" filename="../../resources/drawables/heartrate-24.png" dithering="none" />
+	<label id="HeartrateLabel" x="35" y="62" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_WHITE" text="@Strings.no_value" />
+    <bitmap id="TemperatureIcon" x="5" y="92" filename="../../resources/drawables/temperature-24.png" dithering="none" />
+	<label id="TemperatureLabel" x="35" y="92" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_WHITE" text="@Strings.no_value" />
+</layout>

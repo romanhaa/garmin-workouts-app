@@ -1,0 +1,51 @@
+<strings>
+	<string id="AppName">7-мин</string>
+	<string id="AppDescription">7-минутная тренировка</string>
+
+	<string id="AppVersionLabel">Версия</string>
+	<string id="ExerciseTimeLabel">Продолжительность упражнения (сек)</string>
+	<string id="ExerciseTimePrompt">Введите время упражнения в секундах</string>
+	<string id="ExerciseTimeError">Время упражнения не может быть меньше 10 секунд</string>
+	<string id="RestTimeLabel">Продолжительность отдыха (сек)</string>
+	<string id="RestTimePrompt">Введите время отдыха в секундах</string>
+	<string id="RestTimeError">Время отдыха не может быть меньше 5 секунд</string>
+	<string id="ExerciseCountLabel">Количество упражнений</string>
+	<string id="ExerciseCountPrompt">Введите количество упражнений за тренировку</string>
+	<string id="ExerciseCountError">Количетсво упражнений не может быть меньше 1</string>
+	<string id="ActivityTypeLabel">Тип активности</string>
+	<string id="ActivityTypePrompt">Выберите тип активности</string>
+	<string id="NotifPolicyLabel">Политика уведомлений</string>
+	<string id="NotifPolicyPrompt">Выберите способ уведомления о смене упражнений</string>
+	<string id="AllowVibrationLabel">Разрешить вибрацию</string>
+	<string id="AllowToneLabel">Разрешить звуковые уведомления</string>
+
+	<string id="press_start">Нажмите старт</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Приготовиться</string>
+	<string id="rest">Отдых</string>
+	<string id="stop_session">Закончить тренировку?</string>
+	<string id="sevenminutes">7 минут</string>
+	<string id="cardio">Кардио</string>
+	<string id="strength">Сила</string>
+	<string id="flexibility">Гибкость</string>
+	<string id="no_notif">Без уведомлений</string>
+	<string id="notif_start_end">Начало и конец упражнения</string>
+	<string id="notif_every_10s">Каждые 10 секунд</string>
+	<string id="saving_activity">Сохранение...</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise">Упражнение #</string>
+	<string id="exercise1">Прыжки с хлопками</string>
+	<string id="exercise2">Приседание у стены</string>
+	<string id="exercise3">Отжимания</string>
+	<string id="exercise4">Скручивания</string>
+	<string id="exercise5">Зашагивания на стул</string>
+	<string id="exercise6">Приседания</string>
+	<string id="exercise7">Отжимания от стула</string>
+	<string id="exercise8">Планка</string>
+	<string id="exercise9">Высокий бег на месте</string>
+	<string id="exercise10">Выпады вперед</string>
+	<string id="exercise11">Отжимания поворотом</string>
+	<string id="exercise12">Боковая планка лево</string>
+	<string id="exercise13">Боковая планка право</string>
+</strings>

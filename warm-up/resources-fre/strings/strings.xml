@@ -1,0 +1,51 @@
+<strings>
+	<string id="AppName">7-min</string>
+	<string id="AppDescription">7 Minutes d'exercices</string>
+
+	<string id="AppVersionLabel">Version</string>
+	<string id="ExerciseTimeLabel">Durée des exercices (s)</string>
+	<string id="ExerciseTimePrompt">Entrer la durée des exercices, en secondes</string>
+	<string id="ExerciseTimeError">La durée des exercices ne peut pas être inférieure à 15 secondes</string>
+	<string id="RestTimeLabel">Durée du repos (s)</string>
+	<string id="RestTimePrompt">Entrer la durée de la période de repos, en secondes</string>
+	<string id="RestTimeError">La durée du repos ne peut pas être inférieure à 10 secondes</string>
+	<string id="ExerciseCountLabel">Nombre d'exercices</string>
+	<string id="ExerciseCountPrompt">Entrer le nombre d'exercices par session</string>
+	<string id="ExerciseCountError">Le nombre d'exercices ne peut pas être inférieur à 1</string>
+	<string id="ActivityTypeLabel">Type d'activité</string>
+	<string id="ActivityTypePrompt">Sélectionner le type d'activité</string>
+	<string id="NotifPolicyLabel">Politique de notification</string>
+	<string id="NotifPolicyPrompt">Sélectionner quand être notifier des changements d'exercice</string>
+	<string id="AllowVibrationLabel">Notification par vibration</string>
+	<string id="AllowToneLabel">Notification sonore</string>
+
+	<string id="press_start">App. sur Démarrer</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Préparez-vous</string>
+	<string id="rest">Repos</string>
+	<string id="stop_session">Arrêter la session ?</string>
+	<string id="sevenminutes">7 Minutes</string>
+	<string id="cardio">Cardio</string>
+	<string id="strength">Musculation</string>
+	<string id="flexibility">Souplesse</string>
+	<string id="no_notif">Aucune notification</string>
+	<string id="notif_start_end">Début et fin d'exercice</string>
+	<string id="notif_every_10s">Toutes les 10 secondes</string>
+	<string id="saving_activity">Enregistrement...</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise">Exercice n°</string>
+	<string id="exercise1">Jumping jacks</string>
+	<string id="exercise2">Chaise (dos au mur)</string>
+	<string id="exercise3">Pompes</string>
+	<string id="exercise4">Abdo. crunch</string>
+	<string id="exercise5">Montée sur chaise</string>
+	<string id="exercise6">Squats</string>
+	<string id="exercise7">Dips sur chaise</string>
+	<string id="exercise8">Planche</string>
+	<string id="exercise9">Montée de genoux</string>
+	<string id="exercise10">Fentes avant</string>
+	<string id="exercise11">Pompes en T</string>
+	<string id="exercise12">Planche lat. gauche</string>
+	<string id="exercise13">Planche lat. droite</string>
+</strings>

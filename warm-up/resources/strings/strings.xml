@@ -1,0 +1,51 @@
+<strings>
+	<string id="AppName">7-min</string>
+	<string id="AppDescription">7-Minute Workout</string>
+
+	<string id="AppVersionLabel">Version</string>
+	<string id="ExerciseTimeLabel">Exercise duration (s)</string>
+	<string id="ExerciseTimePrompt">Enter duration for exercise, in seconds</string>
+	<string id="ExerciseTimeError">Exercise duration cannot be less than 10 seconds</string>
+	<string id="RestTimeLabel">Rest duration (s)</string>
+	<string id="RestTimePrompt">Enter duration of rest, period in seconds</string>
+	<string id="RestTimeError">Rest duration cannot be less than 5 seconds</string>
+	<string id="ExerciseCountLabel">Exercise count</string>
+	<string id="ExerciseCountPrompt">Enter the number of exercises for the session</string>
+	<string id="ExerciseCountError">Exercise count cannot be less than 1</string>
+	<string id="ActivityTypeLabel">Activity type</string>
+	<string id="ActivityTypePrompt">Select the activity type</string>
+	<string id="NotifPolicyLabel">Notification policy</string>
+	<string id="NotifPolicyPrompt">Select how to be notified of exercise changes</string>
+	<string id="AllowVibrationLabel">Allow vibrations</string>
+	<string id="AllowToneLabel">Allow sound notifications</string>
+
+	<string id="press_start">Press start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Get ready</string>
+	<string id="rest">Rest</string>
+	<string id="stop_session">Stop session?</string>
+	<string id="sevenminutes">7-Minute</string>
+	<string id="cardio">Cardio</string>
+	<string id="strength">Strength</string>
+	<string id="flexibility">Flexibility</string>
+	<string id="no_notif">No notification</string>
+	<string id="notif_start_end">Exercise start and end</string>
+	<string id="notif_every_10s">Every 10 seconds</string>
+	<string id="saving_activity">Saving...</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise">Exercise #</string>
+	<string id="exercise1">Jumping jacks</string>
+	<string id="exercise2">Wall sit</string>
+	<string id="exercise3">Push-up</string>
+	<string id="exercise4">Abdominal crunch</string>
+	<string id="exercise5">Step-up (chair)</string>
+	<string id="exercise6">Squat</string>
+	<string id="exercise7">Triceps dip (chair)</string>
+	<string id="exercise8">Plank</string>
+	<string id="exercise9">High-knees running</string>
+	<string id="exercise10">Lunge</string>
+	<string id="exercise11">Push-up rotation</string>
+	<string id="exercise12">Side plank left</string>
+	<string id="exercise13">Side plank right</string>
+</strings>

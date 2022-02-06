@@ -1,0 +1,51 @@
+<strings>
+	<string id="AppName">7-min</string>
+	<string id="AppDescription">7-Minuters träning</string>
+
+	<string id="AppVersionLabel">Version</string>
+	<string id="ExerciseTimeLabel">Träningslängd (s)</string>
+	<string id="ExerciseTimePrompt">Fyll i längd för övning, i sekunder</string>
+	<string id="ExerciseTimeError">Träningslägden kan inte vara kortare än 10 sekunder</string>
+	<string id="RestTimeLabel">Vilopreriod (s)</string>
+	<string id="RestTimePrompt">Fyll i tid för vila, i sekunder</string>
+	<string id="RestTimeError">Vilotid kan inte vara midre än 5 sekunder</string>
+	<string id="ExerciseCountLabel">Antal moment</string>
+	<string id="ExerciseCountPrompt">Fyll i antal övningar för omgången</string>
+	<string id="ExerciseCountError">Övningarna kan inte vara färre än 1</string>
+	<string id="ActivityTypeLabel">Aktivitetstyp</string>
+	<string id="ActivityTypePrompt">Välj aktivitetstyp</string>
+	<string id="NotifPolicyLabel">Notifikations inställning ha</string>
+	<string id="NotifPolicyPrompt">Välj notifiering när övningen ändras</string>
+	<string id="AllowVibrationLabel">Tillåt vibrationer</string>
+	<string id="AllowToneLabel">Tillåt ljud</string>
+
+	<string id="press_start">Tryck start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Gör dig redo</string>
+	<string id="rest">Vila</string>
+	<string id="stop_session">Stoppa session?</string>
+	<string id="sevenminutes">7-Minuter</string>
+	<string id="cardio">Kondition</string>
+	<string id="strength">Styrka</string>
+	<string id="flexibility">Rörlighet</string>
+	<string id="no_notif">Ingen notifikation</string>
+	<string id="notif_start_end">Träning start och stop</string>
+	<string id="notif_every_10s">Varje 10 sekund</string>
+	<string id="saving_activity">Sparar...</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise">Övning #</string>
+	<string id="exercise1">Krysshopp</string>
+	<string id="exercise2">Jägarvila</string>
+	<string id="exercise3">Armhävning</string>
+	<string id="exercise4">Situps</string>
+	<string id="exercise5">Step-up (stol)</string>
+	<string id="exercise6">Knäböj</string>
+	<string id="exercise7">Triceps dips (stol)</string>
+	<string id="exercise8">Plankan</string>
+	<string id="exercise9">Höga knän jogging</string>
+	<string id="exercise10">Utfallssteg</string>
+	<string id="exercise11">Push-up rotation</string>
+	<string id="exercise12">Sidoplanka vänster</string>
+	<string id="exercise13">Sidoplanka höger</string>
+</strings>
