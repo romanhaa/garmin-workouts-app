@@ -1,4 +1,3 @@
-using Toybox.ActivityRecording as Recording;
 using Toybox.Attention;
 using Toybox.Lang;
 using Toybox.Sensor;
@@ -92,23 +91,6 @@ class HictView extends Ui.View {
         // Load activity preference values
         loadPreferences();
 
-        // Start activity recording
-        if (Toybox has :ActivityRecording) {
-
-            if (Log.isDebugEnabled()) {
-                Log.debug("Activity recording is supported, starting session");
-            }
-
-            var sessionName = findSessionName();
-            var type = findActivityType();
-
-            session = Recording.createSession({
-                :sport=>Recording.SPORT_TRAINING,
-                :subSport=>type,
-                :name=>sessionName
-            });
-        }
-
         // Initialize counters
         running = true;
         resting = true;
@@ -137,14 +119,6 @@ class HictView extends Ui.View {
         // Stop timer
         timer.stop();
 
-        // Pause activity recording
-        if (session != null) {
-            if (Log.isDebugEnabled()) {
-                Log.debug("Stopping session recording");
-            }
-            session.stop();
-        }
-
         if (running && !isDone()) {
             // Ask for confirmation
             var dialog = new Ui.Confirmation(Ui.loadResource(Rez.Strings.stop_session));
@@ -170,21 +144,6 @@ class HictView extends Ui.View {
             Log.debug("Closing activity");
         }
 
-        // Stop activity recording
-        if (session != null) {
-            // Ignore sessions if less than half of exercises are complete
-            if (!isShouldSaveSession && exerciseCount < (maxExerciseCount / 2)) {
-                if (Log.isDebugEnabled()) {
-                    Log.debug("Discarding workout session with only " + exerciseCount + " exercises");
-                }
-            } else {
-                if (Log.isDebugEnabled()) {
-                    Log.debug("Workout session will be saved on exit");
-                }
-                isShouldSaveSession = true;
-            }
-        }
-
         // Reset counters
         running = false;
         resting = false;
@@ -197,36 +156,6 @@ class HictView extends Ui.View {
         // Save activity
         if (Log.isDebugEnabled()) {
             Log.debug("Saving activity on exit");
-        }
-        if (session != null) {
-            if (!isShouldSaveSession) {
-                // Ignore session if not complete
-                if (Log.isDebugEnabled()) {
-                    Log.debug("Discarding workout session");
-                }
-                session.discard();
-            } else {
-                // Show progress bar
-                var progressMessage = Ui.loadResource(Rez.Strings.saving_activity);
-                progressBar = new Ui.ProgressBar(progressMessage, null);
-                Ui.pushView(progressBar, null, Ui.SLIDE_IMMEDIATE);
-
-                if (Log.isDebugEnabled()) {
-                    Log.debug("Saving workout session");
-                }
-                session.save();
-
-                // Hide progress bar in 2 seconds
-                progressBarTimer = new Timer.Timer();
-                progressBarTimer.start(method(:exitApp), 1000, false);
-            }
-
-            // Clean session
-            session = null;
-        } else {
-            if (Log.isDebugEnabled()) {
-                Log.debug("No workout session to save");
-            }
         }
     }
 
@@ -284,21 +213,6 @@ class HictView extends Ui.View {
         periodTime = 0;
         resting = false;
 
-        if (session != null) {
-            if (!session.isRecording()) {
-                if (Log.isDebugEnabled()) {
-                    Log.debug("Starting session");
-                }
-                session.start();
-            } else {
-                // Add lap
-                if (Log.isDebugEnabled()) {
-                    Log.debug("Adding lap to session");
-                }
-                session.addLap();
-            }
-        }
-
         if (Log.isDebugEnabled()) {
             Log.debug("New exercise: " + EXERCISES[(exerciseCount - 1) % EXERCISES.size()]);
         }
@@ -316,14 +230,6 @@ class HictView extends Ui.View {
 
         periodTime = 0;
         resting = true;
-
-        if (session != null && session.isRecording()) {
-            // Add lap
-            if (Log.isDebugEnabled()) {
-                Log.debug("Adding lap to session");
-            }
-            session.addLap();
-        }
 
         if (Log.isDebugEnabled()) {
             Log.debug("Rest period");
@@ -452,53 +358,6 @@ class HictView extends Ui.View {
         return (activityType == Prefs.SEVEN);
     }
 
-    hidden function findSessionName() {
-        /*
-        var name = "";
-        if (activityType == Prefs.CARDIO) {
-            // Cardio training
-            name = Ui.loadResource(Rez.Strings.cardio);
-        } else if (activityType == Prefs.STRENGTH) {
-            // Strength training
-            name = Ui.loadResource(Rez.Strings.strength);
-        } else if (activityType == Prefs.FLEXIBILITY) {
-            // Flexibility training
-            name = Ui.loadResource(Rez.Strings.flexibility);
-        } else {
-            // Seven minutes
-            name = Ui.loadResource(Rez.Strings.sevenminutes);
-        }
-        return name;
-        */
-
-        // The suggested maximum length of the name is 15 characters (some devices support longer names).
-        return "7-min workout";
-    }
-
-    hidden function findActivityType() {
-        var type = Recording.SUB_SPORT_CARDIO_TRAINING;
-        if (activityType == Prefs.STRENGTH) {
-            // Strength training
-            type = Recording.SUB_SPORT_STRENGTH_TRAINING;
-            if (Log.isDebugEnabled()) {
-                Log.debug("Activity type: Strength");
-            }
-        } else if (activityType == Prefs.FLEXIBILITY) {
-            // Flexibility training
-            type = Recording.SUB_SPORT_FLEXIBILITY_TRAINING;
-            if (Log.isDebugEnabled()) {
-                Log.debug("Activity type: Flexibility");
-            }
-        } else {
-            // Seven minutes or cardio training
-            type = Recording.SUB_SPORT_CARDIO_TRAINING;
-            if (Log.isDebugEnabled()) {
-                Log.debug("Activity type: Cardio");
-            }
-        }
-        return type;
-    }
-
     //! Format number with 2 digits
     //! Bug: 2-digit format does not work on productive watch (1.2.1)
     //! @param number the number to format
@@ -536,8 +395,6 @@ class HictView extends Ui.View {
     // Resting flag, true if activity is in rest mode between exercises
     hidden var resting = false;
 
-    // Activity recording session
-    hidden var session = null;
     // Activity timer
     hidden var timer = null;
     // Backlight timer

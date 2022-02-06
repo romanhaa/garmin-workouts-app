@@ -30,7 +30,6 @@
 	<string id="flexibility">Flexibility</string>
 	<string id="no_notif">No notification</string>
 	<string id="notif_start_end">Exercise start and end</string>
-	<string id="saving_activity">Saving...</string>
 
 	<!-- Keep exercise name less than 20 characters -->
 	<string id="exercise">Exercise #</string>
