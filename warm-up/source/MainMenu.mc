@@ -11,27 +11,27 @@ class MainMenu extends Ui.Menu2 {
 
         // Activity type
         label = Ui.loadResource(Rez.Strings.ActivityTypeLabel);
-        activityTypeItem = new MenuItem(label, null, :ActivityType, null);
+        activityTypeItem = new Ui.MenuItem(label, null, :ActivityType, null);
         self.addItem(activityTypeItem);
 
         // Exercise count
         label = Ui.loadResource(Rez.Strings.ExerciseCountLabel);
-        exerciseCountItem = new MenuItem(label, null, :ExerciseCount, null);
+        exerciseCountItem = new Ui.MenuItem(label, null, :ExerciseCount, null);
         self.addItem(exerciseCountItem);
 
         // Exercise duration
         label = Ui.loadResource(Rez.Strings.ExerciseTimeLabel);
-        exerciseDurationItem = new MenuItem(label, null, :ExerciseDuration, null);
+        exerciseDurationItem = new Ui.MenuItem(label, null, :ExerciseDuration, null);
         self.addItem(exerciseDurationItem);
 
         // Rest duration
         label = Ui.loadResource(Rez.Strings.RestTimeLabel);
-        restDurationItem = new MenuItem(label, null, :RestDuration, null);
+        restDurationItem = new Ui.MenuItem(label, null, :RestDuration, null);
         self.addItem(restDurationItem);
 
         // Notification policy
         label = Rez.Strings.NotifPolicyLabel;
-        notifPolicyItem = new MenuItem(label, null, :NotifPolicy, null);
+        notifPolicyItem = new Ui.MenuItem(label, null, :NotifPolicy, null);
         self.addItem(notifPolicyItem);
     }
 
