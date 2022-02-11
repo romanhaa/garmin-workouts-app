@@ -23,8 +23,7 @@ class HictView extends Ui.View {
     //! the state of this View and prepare it to be shown. This includes
     //! loading resources into memory.
     function onShow() {
-        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_FOOTPOD]);
-        Sensor.enableSensorEvents(method(:sensorAction));
+        Sensor.setEnabledSensors([Sensor.SENSOR_FOOTPOD]);
     }
 
     //! Update the view
@@ -46,10 +45,6 @@ class HictView extends Ui.View {
         // Draw the exercise count label
         view = View.findDrawableById(ExerciseLabel);
         drawExerciseLabel(view);
-
-        // Draw the heart rate label
-        view = View.findDrawableById(HeartrateLabel);
-        drawHeartrateLabel(view);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -193,17 +188,6 @@ class HictView extends Ui.View {
         Ui.requestUpdate();
     }
 
-    //! Action on sensor event: save heart rate and temperature for display
-    function sensorAction(info) {
-        if (info != null) {
-            // Heart rate sensor info
-            heartRate = (info.heartRate == null) ? 0 : info.heartRate;
-
-            // Update view
-            Ui.requestUpdate();
-        }
-    }
-
     hidden function switchToWorkout() {
         if (Log.isDebugEnabled()) {
             Log.debug("Switching to workout period");
@@ -337,14 +321,6 @@ class HictView extends Ui.View {
         }
     }
 
-    hidden function drawHeartrateLabel(view) {
-        if (heartRate > 0) {
-            view.setText(Lang.format("$1$", [heartRate.format("%d")]));
-        } else {
-            view.setText(Ui.loadResource(Rez.Strings.no_value));
-        }
-    }
-
     //! Format number with 2 digits
     //! Bug: 2-digit format does not work on productive watch (1.2.1)
     //! @param number the number to format
@@ -398,9 +374,6 @@ class HictView extends Ui.View {
     // Flag to know if session should be uploaded to Garmin Connect
     hidden var isShouldSaveSession = false;
 
-    // Heart rate value, if available
-    hidden var heartRate = 0;
-
     // Max number of exercises
     hidden var maxExerciseCount = 13;
     // Exercise delay
@@ -420,5 +393,4 @@ class HictView extends Ui.View {
     hidden const NextLabel = "NextLabel";
     hidden const TimerLabel = "TimerLabel";
     hidden const ExerciseLabel = "ExerciseLabel";
-    hidden const HeartrateLabel = "HeartrateLabel";
 }
