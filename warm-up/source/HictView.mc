@@ -38,10 +38,6 @@ class HictView extends Ui.View {
         view = View.findDrawableById(TimerLabel);
         drawTimerLabel(view);
 
-        // Draw the next label
-        view = View.findDrawableById(NextLabel);
-        drawNextExerciseLabel(view);
-
         // Draw the exercise count label
         view = View.findDrawableById(ExerciseLabel);
         drawExerciseLabel(view);
@@ -293,16 +289,6 @@ class HictView extends Ui.View {
         }
     }
 
-    hidden function drawNextExerciseLabel(view) {
-        if (running) {
-            var text = "";
-            text = exerciseCount < maxExerciseCount ? EXERCISES[exerciseCount % EXERCISES.size()] : "";
-            view.setText(text);
-        } else {
-            view.setText("");
-        }
-    }
-
     hidden function drawTimerLabel(view) {
         if (running) {
             var delay = exerciseCount < 1 ? startDelay : restDelay;
@@ -390,7 +376,6 @@ class HictView extends Ui.View {
     hidden var allowTone = true;
 
     hidden const TextLabel = "TextLabel";
-    hidden const NextLabel = "NextLabel";
     hidden const TimerLabel = "TimerLabel";
     hidden const ExerciseLabel = "ExerciseLabel";
 }
