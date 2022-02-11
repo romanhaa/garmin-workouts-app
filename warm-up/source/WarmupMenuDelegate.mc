@@ -2,7 +2,7 @@ using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 
 //! Application menu delegate
-class HictMenuDelegate extends Ui.Menu2InputDelegate {
+class WarmupMenuDelegate extends Ui.Menu2InputDelegate {
 
     function initialize() {
         Menu2InputDelegate.initialize();

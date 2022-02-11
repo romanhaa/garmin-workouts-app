@@ -20,7 +20,7 @@ class StopConfirmationDelegate extends Ui.ConfirmationDelegate {
         }
     }
 
-    function setHictView(v) {
+    function setWarmupView(v) {
         view = v;
     }
 

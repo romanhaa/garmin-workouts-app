@@ -1,7 +1,7 @@
 using Toybox.WatchUi as Ui;
 
 //! Application behavior delegate
-class HictBehaviorDelegate extends Ui.BehaviorDelegate {
+class WarmupBehaviorDelegate extends Ui.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
@@ -23,7 +23,7 @@ class HictBehaviorDelegate extends Ui.BehaviorDelegate {
     //! Menu button pressed
     function onMenu() {
         if ((view != null) && !view.isRunning()) {
-            Ui.pushView(new MainMenu(), new HictMenuDelegate(), Ui.SLIDE_UP);
+            Ui.pushView(new MainMenu(), new WarmupMenuDelegate(), Ui.SLIDE_UP);
             return true;
          }
          return false;
@@ -48,7 +48,7 @@ class HictBehaviorDelegate extends Ui.BehaviorDelegate {
         return false;
     }
 
-    function setHictView(v) {
+    function setWarmupView(v) {
         view = v;
     }
 

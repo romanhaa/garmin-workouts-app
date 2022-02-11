@@ -2,7 +2,7 @@ using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 
 //! Application
-class HictApp extends App.AppBase {
+class WarmupApp extends App.AppBase {
 
     //! Initialize the app
     function initialize() {
@@ -15,11 +15,11 @@ class HictApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-        view = new HictView();
-        behaviorDelegate = new HictBehaviorDelegate();
+        view = new WarmupView();
+        behaviorDelegate = new WarmupBehaviorDelegate();
 
         view.loadPreferences();
-        behaviorDelegate.setHictView(view);
+        behaviorDelegate.setWarmupView(view);
 
         return [ view, behaviorDelegate ];
     }

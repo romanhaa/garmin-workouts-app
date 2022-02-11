@@ -1,6 +1,6 @@
 <strings>
-	<string id="AppName">7-min</string>
-	<string id="AppDescription">7-Minute Workout</string>
+	<string id="AppName">Warm-up</string>
+	<string id="AppDescription">Warm-up</string>
 
 	<string id="AppVersionLabel">Version</string>
 	<string id="ExerciseTimeLabel">Exercise duration (s)</string>

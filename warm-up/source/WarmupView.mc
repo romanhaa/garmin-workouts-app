@@ -8,7 +8,7 @@ using Toybox.Timer;
 using Toybox.WatchUi as Ui;
 
 //! Main view for application
-class HictView extends Ui.View {
+class WarmupView extends Ui.View {
 
     function initialize() {
         View.initialize();
@@ -114,7 +114,7 @@ class HictView extends Ui.View {
             // Ask for confirmation
             var dialog = new Ui.Confirmation(Ui.loadResource(Rez.Strings.stop_session));
             var delegate = new StopConfirmationDelegate();
-            delegate.setHictView(self);
+            delegate.setWarmupView(self);
             Ui.pushView(dialog, delegate, Ui.SLIDE_IMMEDIATE );
         } else {
             // Close activity
