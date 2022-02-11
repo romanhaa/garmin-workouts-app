@@ -1,5 +1,5 @@
 <layout id="MainLayout">
-	<label id="TextLabel" x="center" y="30" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_GREEN" text="@Strings.press_start" />
-	<label id="TimerLabel" x="147" y="57" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
-	<label id="ExerciseLabel" x="39" y="55" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_WHITE" text="@Strings.no_value" />
+	<label id="ExerciseLabel" x="center" y="10" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" text="@Strings.no_value" />
+	<label id="TimerLabel" x="center" y="35" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+	<label id="TextLabel" x="center" y="125" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_YELLOW" />
 </layout>
