@@ -61,7 +61,7 @@ module Prefs {
 
     //! Get exercise count
     function getExerciseCount() {
-        var count = getNumber(EXERCISE_COUNT, 13, 1, 999);
+        var count = getNumber(EXERCISE_COUNT, 10, 1, 999);
         if (Log.isDebugEnabled()) {
             Log.debug("Prefs: exercise count value is " + count);
         }

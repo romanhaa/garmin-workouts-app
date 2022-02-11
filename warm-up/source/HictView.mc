@@ -333,10 +333,7 @@ class HictView extends Ui.View {
         Ui.loadResource(Rez.Strings.exercise7),
         Ui.loadResource(Rez.Strings.exercise8),
         Ui.loadResource(Rez.Strings.exercise9),
-        Ui.loadResource(Rez.Strings.exercise10),
-        Ui.loadResource(Rez.Strings.exercise11),
-        Ui.loadResource(Rez.Strings.exercise12),
-        Ui.loadResource(Rez.Strings.exercise13)
+        Ui.loadResource(Rez.Strings.exercise10)
     ];
 
     // Running flag, true if activity is running
@@ -361,7 +358,7 @@ class HictView extends Ui.View {
     hidden var isShouldSaveSession = false;
 
     // Max number of exercises
-    hidden var maxExerciseCount = 13;
+    hidden var maxExerciseCount = 10;
     // Exercise delay
     hidden var exerciseDelay = 30;
     // Pause delay

@@ -27,17 +27,14 @@
 
 	<!-- Keep exercise name less than 20 characters -->
 	<string id="exercise">Exercise #</string>
-	<string id="exercise1">Jumping jacks</string>
-	<string id="exercise2">Wall sit</string>
-	<string id="exercise3">Push-up</string>
-	<string id="exercise4">Abdominal crunch</string>
-	<string id="exercise5">Step-up (chair)</string>
-	<string id="exercise6">Squat</string>
-	<string id="exercise7">Triceps dip (chair)</string>
-	<string id="exercise8">Plank</string>
-	<string id="exercise9">High-knees running</string>
-	<string id="exercise10">Lunge</string>
-	<string id="exercise11">Push-up rotation</string>
-	<string id="exercise12">Side plank left</string>
-	<string id="exercise13">Side plank right</string>
+	<string id="exercise1">Arm circles\n(left)</string>
+	<string id="exercise2">Arm circles\n(right)</string>
+	<string id="exercise3">Torso circles</string>
+	<string id="exercise4">Toe touch kicks</string>
+	<string id="exercise5">Torso rotations\nhigh knees</string>
+	<string id="exercise6">Standing obligue\ncrunches</string>
+	<string id="exercise7">Calves</string>
+	<string id="exercise8">Jumping jacks</string>
+	<string id="exercise9">Fly jacks</string>
+	<string id="exercise10">High knees</string>
 </strings>
