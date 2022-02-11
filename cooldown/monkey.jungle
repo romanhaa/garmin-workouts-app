@@ -1,0 +1,11 @@
+project.manifest = manifest.xml
+
+base.sourcePath = $(vivoactive3.sourcePath)
+
+# Shared resource paths
+fr55.resourcePath = $(fr55.resourcePath)
+
+# Source paths
+
+# CIQ 3
+fr55.sourcePath=source

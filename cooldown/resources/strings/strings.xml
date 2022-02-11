@@ -1,0 +1,46 @@
+<strings>
+	<string id="AppName">Cooldown</string>
+	<string id="AppDescription">Cooldown</string>
+
+	<string id="AppVersionLabel">Version</string>
+	<string id="ExerciseTimeLabel">Exercise duration (s)</string>
+	<string id="ExerciseTimePrompt">Enter duration for exercise, in seconds</string>
+	<string id="ExerciseTimeError">Exercise duration cannot be less than 10 seconds</string>
+	<string id="RestTimeLabel">Rest duration (s)</string>
+	<string id="RestTimePrompt">Enter duration of rest, period in seconds</string>
+	<string id="RestTimeError">Rest duration cannot be less than 5 seconds</string>
+	<string id="ExerciseCountLabel">Exercise count</string>
+	<string id="ExerciseCountPrompt">Enter the number of exercises for the session</string>
+	<string id="ExerciseCountError">Exercise count cannot be less than 1</string>
+	<string id="NotifPolicyLabel">Notification policy</string>
+	<string id="NotifPolicyPrompt">Select how to be notified of exercise changes</string>
+	<string id="AllowVibrationLabel">Allow vibrations</string>
+	<string id="AllowToneLabel">Allow sound notifications</string>
+
+	<string id="press_start">Press start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Get ready</string>
+	<string id="rest">Rest</string>
+	<string id="stop_session">Stop session?</string>
+	<string id="no_notif">No notification</string>
+	<string id="notif_start_end">Exercise start and end</string>
+
+	<!-- Keep exercise name less than 20 characters -->
+	<string id="exercise">Exercise #</string>
+	<string id="exercise1">Torso twists</string>
+	<string id="exercise2">Torso circles</string>
+	<string id="exercise3">Triceps stretch\n(left)</string>
+	<string id="exercise4">Triceps stretch\n(right)</string>
+	<string id="exercise5">Chest cross pull\n(left)</string>
+	<string id="exercise6">Chest cross pull\n(right)</string>
+	<string id="exercise7">Wall chest stretch\n(left)</string>
+	<string id="exercise8">Wall chest stretch\n(right)</string>
+	<string id="exercise9">Calf stretch\n(left)</string>
+	<string id="exercise10">Calf stretch\n(right)</string>
+	<string id="exercise11">Toe touch</string>
+	<string id="exercise12">Quad stretch\n(left)</string>
+	<string id="exercise13">Quad stretch\n(right)</string>
+	<string id="exercise14">Wide floor reach\n(center)</string>
+	<string id="exercise15">Wide floor reach\n(sides)</string>
+	<string id="exercise16">Cobra stretch</string>
+</strings>

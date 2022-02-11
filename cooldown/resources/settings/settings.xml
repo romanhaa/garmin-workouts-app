@@ -1,0 +1,26 @@
+<settings>
+	<setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionLabel">
+		<settingConfig type="alphaNumeric" readonly="true" />
+	</setting>
+	<setting propertyKey="@Properties.exerCount" title="@Strings.ExerciseCountLabel" prompt="@Strings.ExerciseCountPrompt">
+		<settingConfig type="numeric" min="1" errorMessage="@Strings.ExerciseCountError" />
+	</setting>
+	<setting propertyKey="@Properties.exerTime" title="@Strings.ExerciseTimeLabel" prompt="@Strings.ExerciseTimePrompt">
+		<settingConfig type="numeric" min="1" errorMessage="@Strings.ExerciseTimeError" />
+	</setting>
+	<setting propertyKey="@Properties.restTime" title="@Strings.RestTimeLabel" prompt="@Strings.RestTimePrompt">
+		<settingConfig type="numeric" min="1" errorMessage="@Strings.RestTimeError" />
+	</setting>
+	<setting propertyKey="@Properties.notifPolicy" title="@Strings.NotifPolicyLabel" prompt="@Strings.NotifPolicyPrompt">
+		<settingConfig type="list" required="true">
+			<listEntry value="0">@Strings.no_notif</listEntry>
+			<listEntry value="1">@Strings.notif_start_end</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.allowVibration" title="@Strings.AllowVibrationLabel">
+		<settingConfig type="boolean" />
+	</setting>
+	<setting propertyKey="@Properties.allowTone" title="@Strings.AllowToneLabel">
+		<settingConfig type="boolean" />
+	</setting>
+</settings>
