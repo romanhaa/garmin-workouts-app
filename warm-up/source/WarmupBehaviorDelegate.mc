@@ -20,22 +20,12 @@ class WarmupBehaviorDelegate extends Ui.BehaviorDelegate {
         return false;
     }
 
-    //! Menu button pressed
-    function onMenu() {
-        if ((view != null) && !view.isRunning()) {
-            Ui.pushView(new MainMenu(), new WarmupMenuDelegate(), Ui.SLIDE_UP);
-            return true;
-         }
-         return false;
-    }
-
     //! Key pressed
     function onKey(key) {
         if (key.getKey() == Ui.KEY_ENTER) {
             if (Log.isDebugEnabled()) {
                 Log.debug("Key pressed: ENTER");
             }
-
             if (view.isRunning()) {
                 // Stop activity
                 view.stopActivity();

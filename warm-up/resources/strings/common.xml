@@ -1,3 +1,23 @@
 <strings>
-	<string id="AppVersion">1.21</string>
+	<string id="AppName">Warm-up</string>
+	<string id="AppDescription">Warm-up</string>
+	<string id="AppVersion">1.0</string>
+	<string id="AppVersionLabel">Version</string>
+	
+	<string id="press_start">Press start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Get ready</string>
+	<string id="rest">Rest</string>
+	<string id="stop_session">Stop session?</string>
+
+	<string id="exercise1">Arm circles\n(left)</string>
+	<string id="exercise2">Arm circles\n(right)</string>
+	<string id="exercise3">Torso circles</string>
+	<string id="exercise4">Toe touch kicks</string>
+	<string id="exercise5">Torso rotations\nhigh knees</string>
+	<string id="exercise6">Standing obligue\ncrunches</string>
+	<string id="exercise7">Calves</string>
+	<string id="exercise8">Jumping jacks</string>
+	<string id="exercise9">Fly jacks</string>
+	<string id="exercise10">High knees</string>
 </strings>

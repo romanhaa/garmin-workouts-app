@@ -29,19 +29,15 @@ class WarmupView extends Ui.View {
     //! Update the view
     function onUpdate(dc) {
         var view;
-
         // Draw the main text
         view = View.findDrawableById(TextLabel);
         drawMainTextLabel(view);
-
         // Draw the timer
         view = View.findDrawableById(TimerLabel);
         drawTimerLabel(view);
-
         // Draw the exercise count label
         view = View.findDrawableById(ExerciseLabel);
         drawExerciseLabel(view);
-
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }
@@ -78,20 +74,14 @@ class WarmupView extends Ui.View {
         if (Log.isDebugEnabled()) {
             Log.debug("Starting activity");
         }
-
-        // Load activity preference values
-        loadPreferences();
-
         // Initialize counters
         running = true;
         resting = true;
         exerciseCount = 0;
         periodTime = 0;
-
         // Start timer
         timer = new Timer.Timer();
         timer.start(method(:timerAction), 1000, true);
-
         // Update view
         Ui.requestUpdate();
     }
@@ -102,14 +92,11 @@ class WarmupView extends Ui.View {
     //! If not confirmed, then resumeActivity should be called by the handler.
     //! If the session is not running, then close the activity.
     function stopActivity() {
-
         if (Log.isDebugEnabled()) {
             Log.debug("Stopping activity");
         }
-
         // Stop timer
         timer.stop();
-
         if (running && !isDone()) {
             // Ask for confirmation
             var dialog = new Ui.Confirmation(Ui.loadResource(Rez.Strings.stop_session));
@@ -130,11 +117,9 @@ class WarmupView extends Ui.View {
 
     //! Close the activity and clean-up the session.
     function closeActivity() {
-
         if (Log.isDebugEnabled()) {
             Log.debug("Closing activity");
         }
-
         // Reset counters
         running = false;
         resting = false;
@@ -165,7 +150,6 @@ class WarmupView extends Ui.View {
         if (running) {
             // Increment time counter for the period
             periodTime++;
-
             if (resting) {
                 var delay = exerciseCount < 1 ? startDelay : restDelay;
                 if (periodTime >= delay) {
@@ -179,7 +163,6 @@ class WarmupView extends Ui.View {
                 }
             }
         }
-
         // Update view
         Ui.requestUpdate();
     }
@@ -188,37 +171,28 @@ class WarmupView extends Ui.View {
         if (Log.isDebugEnabled()) {
             Log.debug("Switching to workout period");
         }
-
         exerciseCount++;
         periodTime = 0;
         resting = false;
-
         if (Log.isDebugEnabled()) {
             Log.debug("New exercise: " + EXERCISES[(exerciseCount - 1) % EXERCISES.size()]);
         }
-
         turnOnBacklight();
-        if (notificationPolicy != Prefs.POLICY_NONE) {
-            notifyEnd();
-        }
+        notifyEnd();
     }
 
     hidden function switchToRest() {
         if (Log.isDebugEnabled()) {
             Log.debug("Switching to rest period");
         }
-
         periodTime = 0;
         resting = true;
 
         if (Log.isDebugEnabled()) {
             Log.debug("Rest period");
         }
-
         turnOnBacklight();
-        if (notificationPolicy != Prefs.POLICY_NONE) {
-            notifyEnd();
-        }
+        notifyEnd();
 
         // Stop after maxExerciseCount exercises
         if (isDone()) {
@@ -231,9 +205,6 @@ class WarmupView extends Ui.View {
 
     hidden function notifyEnd() {
         turnOnBacklight();
-        if (allowTone) {
-            Attention.playTone(Attention.TONE_STOP);
-        }
         if (allowVibration) {
             Attention.vibrate([
                 new Attention.VibeProfile(100, 1000)
@@ -262,17 +233,6 @@ class WarmupView extends Ui.View {
         if (Attention has :backlight) {
             Attention.backlight(on);
         }
-    }
-
-    //! Load preferences for the view from the object store.
-    //! This can be called from the app when the settings have changed.
-    function loadPreferences() {
-        exerciseDelay = Prefs.getExerciseDuration();
-        restDelay = Prefs.getRestDuration();
-        maxExerciseCount = Prefs.getExerciseCount();
-        notificationPolicy = Prefs.getNotificationPolicy();
-        allowVibration = (Attention has :vibrate) && (Sys.getDeviceSettings().vibrateOn) && (Prefs.isAllowVibration());
-        allowTone = (Attention has :playTone) && (Sys.getDeviceSettings().tonesOn) && (Prefs.isAllowTone());
     }
 
     hidden function drawMainTextLabel(view) {
@@ -358,7 +318,7 @@ class WarmupView extends Ui.View {
     hidden var isShouldSaveSession = false;
 
     // Max number of exercises
-    hidden var maxExerciseCount = 10;
+    hidden var maxExerciseCount = EXERCISES.size();
     // Exercise delay
     hidden var exerciseDelay = 30;
     // Pause delay
@@ -366,11 +326,9 @@ class WarmupView extends Ui.View {
     // Start delay
     hidden const startDelay = 5;
     // Notification policy
-    hidden var notificationPolicy = Prefs.POLICY_START_END;
+    hidden var notificationPolicy = 1;
     // Allow vibration
     hidden var allowVibration = true;
-    // Allow tone
-    hidden var allowTone = true;
 
     hidden const TextLabel = "TextLabel";
     hidden const TimerLabel = "TimerLabel";
