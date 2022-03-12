@@ -1,0 +1,12 @@
+<strings>
+	<string id="AppName">Stretching</string>
+	<string id="AppDescription">Stretching</string>
+	<string id="AppVersion">1.0</string>
+	<string id="AppVersionLabel">Version</string>
+	
+	<string id="press_start">Press start</string>
+	<string id="no_value">--</string>
+	<string id="get_ready">Get ready</string>
+	<string id="rest">Rest</string>
+	<string id="stop_session">Stop session?</string>
+</strings>

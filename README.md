@@ -13,3 +13,4 @@ At the moment only compatible with the Forerunner 55 watch.
 
 - [Warm-up procedure](./warm-up)
 - [Cooldown procedure](./cooldown)
+- [Stretching procedure](./stretching)

@@ -1,0 +1,3 @@
+<properties>
+	<property id="appVersion" type="string">@Strings.AppVersion</property>
+</properties>
